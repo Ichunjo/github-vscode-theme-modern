@@ -1,4 +1,5 @@
-const Color = require("color");
+const ColorModule = require("color");
+const Color = ColorModule.default || ColorModule;
 
 /*
  * Generate color variant by inverting
