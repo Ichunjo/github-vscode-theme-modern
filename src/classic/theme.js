@@ -328,11 +328,25 @@ function getTheme({ style, name }) {
       "welcomePage.buttonHoverBackground": primer.gray[2],
     },
     semanticHighlighting: true,
+    semanticTokenColors: {
+      "comment.documentation": pick({ light: primer.gray[6], dark: primer.gray[5] }),
+    },
     tokenColors: [
       {
         scope: ["comment", "punctuation.definition.comment", "string.comment"],
         settings: {
           foreground: pick({ light: primer.gray[5], dark: primer.gray[4] }),
+        },
+      },
+      {
+        scope: [
+          "comment.block.documentation",
+          "comment.line.documentation",
+          "string.quoted.docstring",
+          "comment.documentation",
+        ],
+        settings: {
+          foreground: pick({ light: primer.gray[6], dark: primer.gray[5] }),
         },
       },
       {

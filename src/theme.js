@@ -413,11 +413,25 @@ function getTheme({ theme, name }) {
       "welcomePage.buttonHoverBackground": color.btn.hoverBg,
     },
     semanticHighlighting: true,
+    semanticTokenColors: {
+      "comment.documentation": color.fg.muted,
+    },
     tokenColors: [
       {
         scope: ["comment", "punctuation.definition.comment", "string.comment"],
         settings: {
           foreground: lightDark(scale.gray[5], scale.gray[3])
+        },
+      },
+      {
+        scope: [
+          "comment.block.documentation",
+          "comment.line.documentation",
+          "string.quoted.docstring",
+          "comment.documentation",
+        ],
+        settings: {
+          foreground: color.fg.muted,
         },
       },
       {
